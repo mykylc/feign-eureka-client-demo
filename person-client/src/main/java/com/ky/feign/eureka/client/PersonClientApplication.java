@@ -1,5 +1,6 @@
 package com.ky.feign.eureka.client;
 
+import com.ky.feign.eureka.client.api.service.PersonService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -12,7 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @description
  **/
 @SpringBootConfiguration
-@EnableFeignClients
+@EnableFeignClients(clients = PersonService.class)
 public class PersonClientApplication {
 
     public static void main(String[] args) {
